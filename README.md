@@ -33,7 +33,7 @@ To run Analytx locally, follow these steps:
 2. Navigate to the project directory.
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/Lordhacker756/analytx
 cd analytx
 ```
 
