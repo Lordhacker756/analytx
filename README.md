@@ -10,6 +10,7 @@ Analytx is a comprehensive backend system designed to facilitate the evaluation 
 - **Report Generation**: Analytx generates detailed reports with charts, offering a visual representation of intern performance.
 - **Individual Score Details**: The system provides a table with individual scores and all feedback, allowing for in-depth analysis of each intern.
 - **Links Management**: Integration with various links for additional reference or documentation.
+- **JWT Authentication with Refresh Token Rotation**: Implemented secure authentication using JWT tokens, with the added security measure of refresh token rotation for enhanced security.
 
 ## Upcoming features
 - **PDF Download**: Download the reports as PDF
@@ -46,7 +47,7 @@ docker-compose up
 
 5. Once the containers are up and running, MySQL can be accessed at `localhost:3333`, and the backend will be available at `localhost:8085`.
 
-6. All the endpoints available can be easily viewed at `http://localhost:8085/swagger-ui/index.html#/`
+6. All the endpoints available can be easily viewed at `http://localhost:8080/swagger-ui.html`
 
 ## Contributing
 
@@ -55,8 +56,3 @@ Contributions to Analytx are welcome! If you find any issues or have suggestions
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Special thanks to the developers and contributors of the technologies used in this project.
-- Inspired by the need for comprehensive intern evaluation tools in organizational settings.
