@@ -3,6 +3,7 @@ version: "1.0"
 services:
   appservice:
     build: ./deploy
+    container_name: spring_backend
     depends_on:
       - database
     environment:
@@ -19,6 +20,7 @@ services:
 
   database:
     image: mysql
+    container_name: database
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_USERNAME=root
