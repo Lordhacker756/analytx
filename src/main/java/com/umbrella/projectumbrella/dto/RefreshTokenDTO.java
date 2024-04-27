@@ -1,12 +1,14 @@
 package com.umbrella.projectumbrella.dto;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class JwtAuthResponseDTO {
-    private String token;
+public class RefreshTokenDTO {
+    private String accessToken;
 }

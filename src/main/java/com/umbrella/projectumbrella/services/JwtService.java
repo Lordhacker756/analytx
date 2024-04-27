@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.security.Key;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
@@ -20,6 +21,9 @@ public class JwtService {
     public String generateToken(UserDetails userDetails){
         return Jwts.builder()
                 .setSubject(userDetails.getUsername())
+                .addClaims(new HashMap<>(){{
+                    put("role", userDetails.getAuthorities());
+                }})
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis() + 86400))
                 .signWith(getSignatureKey(), SignatureAlgorithm.HS256)
