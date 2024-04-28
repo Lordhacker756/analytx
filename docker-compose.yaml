@@ -1,6 +1,14 @@
-version: "1.0"
+version: "3.8"
 
 services:
+  frontend:
+    image: analytx-frontend:latest
+    container_name: analytx-frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - springnet
+
   appservice:
     build: ./deploy
     container_name: spring_backend
@@ -11,10 +19,8 @@ services:
       - spring.datasource.username=root
       - spring.datasource.password=root
       - spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
-
     ports:
-      - 8085:8080
-
+      - "8080:8080"
     networks:
       - springnet
 
@@ -26,10 +32,8 @@ services:
       - MYSQL_USERNAME=root
     volumes:
       - ./data:/var/lib/mysql
-
     ports:
-      - 3333:3306
-
+      - "3333:3306"
     networks:
       - springnet
 
