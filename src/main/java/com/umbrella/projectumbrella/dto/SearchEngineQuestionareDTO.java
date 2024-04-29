@@ -1,5 +1,6 @@
 package com.umbrella.projectumbrella.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,6 +17,8 @@ public class SearchEngineQuestionareDTO {
     private float rating1;
     private float rating2;
     private float rating3;
+
+    @JsonProperty("URL")
     private String URL;
     private String remark;
 
