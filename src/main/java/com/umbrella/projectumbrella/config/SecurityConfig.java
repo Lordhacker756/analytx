@@ -53,7 +53,9 @@ public class SecurityConfig {
                         request -> request
                                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll() // Allow OPTIONS requests
                                 .requestMatchers("/api/v1/auth/**").permitAll()
-                                .requestMatchers("/swagger-ui.html").permitAll()
+                                .requestMatchers("/swagger-ui/**").permitAll()
+                                .requestMatchers("/swagger-resources/*").permitAll()
+                                .requestMatchers("/v3/api-docs/**").permitAll()
                                 .anyRequest().authenticated()
                 )
                 .sessionManagement(
