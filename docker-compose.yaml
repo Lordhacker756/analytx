@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   frontend:
-    image: analytx-frontend:latest
+    image: rudra708/analytx-frontend
     container_name: analytx-frontend
     ports:
       - "3000:3000"
