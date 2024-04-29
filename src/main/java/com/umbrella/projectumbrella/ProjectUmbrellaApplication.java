@@ -29,7 +29,7 @@ public class ProjectUmbrellaApplication implements CommandLineRunner {
 			User user = new User();
 
 			user.setEmail("admin@gmail.com");
-			user.setPassword(new BCryptPasswordEncoder().encode("admin"));
+			user.setPassword(new BCryptPasswordEncoder().encode("Admin@123"));
 			user.setRole(Role.ADMIN);
 
 			userRepository.save(user);
