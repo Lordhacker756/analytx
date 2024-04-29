@@ -29,6 +29,9 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING) // Specify the persistence type as STRING
     private Role role;
 
+    @OneToOne(mappedBy = "user")
+    private ForgotPassword forgotPassword;
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -59,4 +62,5 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
 }
