@@ -3,15 +3,15 @@ version: "3.8"
 services:
   frontend:
     image: rudra708/analytx-frontend
-    container_name: analytx-frontend
+    container_name: frontend
     ports:
       - "3000:3000"
     networks:
       - springnet
 
-  appservice:
-    build: ./deploy
-    container_name: spring_backend
+  backend:
+    image: rudra708/analytx-backend
+    container_name: backend
     depends_on:
       - database
     environment:
