@@ -11,8 +11,6 @@ Analytx is a comprehensive backend system designed to facilitate the evaluation 
 - **Individual Score Details**: The system provides a table with individual scores and all feedback, allowing for in-depth analysis of each intern.
 - **Links Management**: Integration with various links for additional reference or documentation.
 - **JWT Authentication with Refresh Token Rotation**: Implemented secure authentication using JWT tokens, with the added security measure of refresh token rotation for enhanced security.
-
-## Upcoming features
 - **PDF Download**: Download the reports as PDF
 - **Email support**: Send the reports directly to your email
 
