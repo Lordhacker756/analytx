@@ -2,6 +2,7 @@
 ## The perfect collective intern analysis tool!
 
 Analytx is a comprehensive backend system designed to facilitate the evaluation and analysis of interns within an organization. It enables employees to rate interns across various domains, providing detailed feedback and generating insightful reports to aid in decision-making processes.
+Checkout the frontend code here: https://github.com/Lordhacker756/analytx-frontend
 
 ## Features
 
